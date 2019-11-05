@@ -232,7 +232,7 @@ body {
 #two .rwd {
   width: 300px;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 50%;
   margin-left: -150px;
   height: 100px;
