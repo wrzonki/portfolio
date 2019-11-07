@@ -13,6 +13,7 @@ $transition: all 0.4s ease-out;
   src: url("/fonts/447315c0c330fd423c8e1cc18024669d.woff") format("woff"),
     url("/fonts/447315c0c330fd423c8e1cc18024669d.ttf") format("opentype");
 }
+
 body {
   position: relative;
   background-image: url("/img/dot-grid.png");
@@ -23,14 +24,23 @@ body {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  span {
-    color: $green;
-  }
 }
+
+.gradient-text {
+  text-align: center;
+  line-height: .8;
+  font-weight: 900;
+  background: #ec0877;
+  background: linear-gradient(135deg, #ec0877 32.5%, #f93044 45%, #f75735 60%, #fe880e 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .section {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
+
 .status {
   height: 0%;
   width: 5px;
@@ -41,6 +51,31 @@ body {
   transition: $transition;
 }
 
+.zielony {
+  color: $green;
+}
+
+.info {
+  text-align: center;
+  color: $dark;
+
+  span {
+    font-weight: 100;
+  }
+}
+
+#one {
+  h1 {
+    font-weight: 400;
+  }
+
+  h2 {
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
 #two {
   .wrapper {
     width: 100%;
@@ -48,8 +83,9 @@ body {
     margin: auto;
     position: relative;
     transition: $transition;
-    transform: scale(.7);
+    transform: scale(0.7);
   }
+
   .iphone {
     overflow: hidden;
     --iphone-width: 300px;
@@ -65,6 +101,7 @@ body {
     transform: rotateX(40deg) rotateY(30deg) rotateZ(-40deg) perspective(200px);
     box-shadow: -50px -20px 10px 10px rgba(26, 26, 26, 0.2);
     transition: all 0.8s ease-in-out;
+
     .polygon-shine {
       border-radius: 25px;
       position: absolute;
@@ -75,15 +112,28 @@ body {
       height: 100%;
       clip-path: polygon(50% 0%, 100% 100%, 100% 0);
       background: rgba(255, 255, 255, 0.2);
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.2)50%, rgba(255, 255, 255, 0.7)100%); /* Safari 5.1-6.0 */
-      background: -o-linear-gradient(0deg, rgba(255, 255, 255, 0.2)50%, rgba(255, 255, 255, 0.7)100%); /* Opera 11.1-12.0 */ 
-      background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0.2)50%, rgba(255, 255, 255, 0.7)100%); /* Firefox 3.6-15 */
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.2)50%, rgba(255, 255, 255, 0.7)100%); /* Standard syntax */
+      background: linear-gradient(0deg,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.7) 100%);
+      /* Safari 5.1-6.0 */
+      background: -o-linear-gradient(0deg,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.7) 100%);
+      /* Opera 11.1-12.0 */
+      background: -moz-linear-gradient(0deg,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.7) 100%);
+      /* Firefox 3.6-15 */
+      background: linear-gradient(0deg,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.7) 100%);
+      /* Standard syntax */
       transition: all 0.4s ease-in-out;
-      transition-delay: .3s;
+      transition-delay: 0.3s;
       opacity: 1;
     }
   }
+
   .top {
     border-left: 15px solid #bbb;
     position: absolute;
@@ -99,6 +149,7 @@ body {
     background: linear-gradient(to right, #ccc, #fff);
     transition: $transition;
   }
+
   .bottom {
     border-bottom: 10px solid #ddd;
     border-left: 15px solid #bbb;
@@ -115,27 +166,32 @@ body {
     background: linear-gradient(to right, #ccc, #fff);
     transition: all 0.8s ease-in-out;
   }
-  .wrapper:hover > .iphone {
+
+  .wrapper:hover>.iphone {
     transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg) perspective(0px);
     box-shadow: 0px 0px 50px rgba(26, 26, 26, 0.5);
     border-left: 0px solid #bbb;
   }
+
   .wrapper:hover .polygon-shine {
     opacity: 0;
     width: 0;
     height: 0;
   }
+
   .wrapper:hover .top {
     border-left: 0px solid #bbb;
     left: 0px;
     width: 100%;
   }
+
   .wrapper:hover .bottom {
     border-left: 1px solid #bbb;
     left: 0px;
     border-bottom: 2px solid #ddd;
     width: 100%;
   }
+
   .circle {
     background-color: #ccc;
     width: 30px;
@@ -145,6 +201,7 @@ body {
     margin: 6px auto;
     text-align: center;
   }
+
   .text {
     text-align: center;
     display: block;
@@ -159,12 +216,15 @@ body {
     transition: all 1s 0.6s ease-in-out;
     transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
   }
+
   .wrapper:hover .text {
     opacity: 1;
   }
+
   .text i {
     margin-right: 20px;
   }
+
   .speaker {
     width: 100px;
     height: 1px;
@@ -172,17 +232,21 @@ body {
     margin: 0 auto;
     background-color: rgba(26, 26, 26, 0.1);
   }
+
   .content {
     width: 100%;
     height: 100%;
     padding: 30px 5px;
+
     object {
       width: 100%;
       height: 100%;
     }
   }
+
   .main {
     position: relative;
+
     i {
       font-size: 100px;
       position: absolute;
@@ -194,9 +258,11 @@ body {
       transition: all 1.2s 1s ease-in-out;
     }
   }
-  .wrapper:hover .main > i {
+
+  .wrapper:hover .main>i {
     opacity: 1;
   }
+
   .camera {
     width: 5px;
     height: 5px;
@@ -205,6 +271,7 @@ body {
     background-color: rgba(26, 26, 26, 0.3);
     border-radius: 50%;
   }
+
   .rwd {
     width: 300px;
     position: absolute;
@@ -215,56 +282,192 @@ body {
     display: flex;
     justify-content: space-around;
     font-size: 2em;
-    span {
-      color: #fff;
-      $size: 60px;
-      display: block;
-      width: $size;
-      height: $size;
-      line-height: $size;
-      text-align: center;
-      background: #222;
-      border-radius: 50%;
-      transition: $transition;
-    }
-    span:hover {
-      background: $green;
+
+    a {
+      background: $dark;
     }
   }
 }
-.info {
-  $height: 40px;
-  width: 100vw;
-  height: $height;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  .info-wrapper {
-    position: relative;
-    width: 300px;
+
+#three {
+  .skill {
+    font-weight: 100;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+  // -- vars
+  $bg-color: $dark;
+  $default-size: 1em;
+  $label-font-size: $default-size / 4;
+  $label-font-size-redo: $default-size * 4;
+
+  // -- mixins
+  @mixin size($width, $height) {
     height: $height;
-    line-height: $height;
-    .info-title {
-      top: 0;
+    width: $width;
+  }
+
+  @mixin draw-progress($progress, $color) {
+    .pie {
+      .half-circle {
+        border-color: $color;
+      }
+
+      .left-side {
+        transform: rotate($progress * 3.6deg);
+      }
+
+      @if $progress <=50 {
+        .right-side {
+          display: none;
+        }
+      }
+
+      @else {
+        clip: rect(auto, auto, auto, auto);
+
+        .right-side {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  @mixin draw-progress--solid($progress, $color, $bg-color) {
+    background: linear-gradient(to right, $color 50%, $bg-color 50%);
+
+    &:before {
+      @if $progress <=50 {
+        background: $bg-color;
+        transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
+      }
+
+      @else {
+        background: $color;
+        transform: rotate((100 - $progress) / 100 * 360deg);
+      }
+    }
+  }
+
+
+
+
+  .set-size {
+    font-size: 6em;
+  }
+
+
+  .pie-wrapper {
+    @include size($default-size, $default-size);
+    float: left;
+    margin: 15px;
+    position: relative;
+
+    &:nth-child(3n + 1) {
+      clear: both;
+    }
+
+    .pie {
+      @include size(100%, 100%);
+      clip: rect(0, $default-size, $default-size, $default-size / 2);
       left: 0;
       position: absolute;
-      z-index: 100;
-      width: 100%;
-      height: 100%;
-      background: $green;
+      top: 0;
+
+      .half-circle {
+        @include size(100%, 100%);
+        border: ($default-size / 10) solid #3498db;
+        border-radius: 50%;
+        clip: rect(0, $default-size / 2, $default-size, 0);
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
     }
-    .info-black {
-      background: #222;;
-      width: 100%;
-      height: 100%;
+
+    .label {
+      background: $bg-color;
+      border-radius: 50%;
+      bottom: $label-font-size-redo / 10;
+      color: #ecf0f1;
+      cursor: default;
+      display: block;
+      font-size: $label-font-size;
+      left: $label-font-size-redo / 10;
+      line-height: $label-font-size-redo * .70;
       position: absolute;
-      z-index: 10;
-      top: 10px;
-      left: 10px;
+      right: $label-font-size-redo / 10;
+      text-align: center;
+      top: $label-font-size-redo / 10;
+
+      .smaller {
+        color: #bdc3c7;
+        font-size: .45em;
+        padding-bottom: 20px;
+        vertical-align: super;
+      }
     }
+
+    .shadow {
+      @include size(100%, 100%);
+      border: $default-size / 10 solid #bdc3c7;
+      border-radius: 50%;
+    }
+
+    &.style-2 {
+      .label {
+        background: none;
+        color: #7f8c8d;
+
+        .smaller {
+          color: #bdc3c7;
+        }
+      }
+    }
+
+    &.progress-90 {
+      @include draw-progress(90, #AB47BC);
+    }
+
+    &.progress-50 {
+      @include draw-progress(50, #EF5350);
+    }
+
+    &.progress-80 {
+      @include draw-progress(80, #1E88E5);
+    }
+
+    &.progress-95 {
+      @include draw-progress(95, #43A047);
+    }
+
+    &.progress-70 {
+      @include draw-progress(70, #FF9800);
+    }
+
+    &.progress-60 {
+      @include draw-progress(70, #FFEA00);
+    }
+
 
   }
-}
 
+
+
+}
+#five {
+
+    .lnkd {
+      background: #2867B2;
+    }
+    .mail {
+      background: #B23121;
+    }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}

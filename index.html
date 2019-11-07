@@ -1,507 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="/css/style.css" media="screen,projection" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    <title>CV Paweł Wrzosek</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104080129-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-104080129-1");
-    </script>
-    <script>
-      let sendDownloadPdfEvent = function() {
-        gtag("event", "Pobranie CV");
-      };
-    </script>
-  </head>
-  <body>
-    <!-- SEKCJA -->
-    <div class="status"></div>
-    <section id="one" class="section valign-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 center-align">
-            <h1>Paweł Wrzosek</h1>
-            <h2>
-              <span>Front End Developer</span>
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="two" class="section">
-      <div class="info">
-        <div class="info-wrapper">
-          <div class="info-title">
-            Responsive Web Design
-          </div>
-          <div class="info-black"></div>
-        </div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="/css/style.css" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <title>CV Paweł Wrzosek</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104080129-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-104080129-1");
+  </script>
+  <script>
+    let sendDownloadPdfEvent = function () {
+      gtag("event", "Pobranie CV");
+    };
+  </script>
+</head>
+
+<body>
+  <!-- SEKCJA -->
+  <div class="status"></div>
+  <section id="one" class="section valign-wrapper">
+    <div class="container">
       <div class="row">
         <div class="col s12 center-align">
-          <div class="wrapper">
-            <div class="iphone">
-              <div class="polygon-shine"></div>
-              <div class="top">
-                <div class="camera"></div>
-                <div class="speaker"></div>
-              </div>
-              <div class="content"> </div>
-              <div class="main"> </div>
-              <div class="bottom">
-                <div class="circle"></div>
-              </div>
-            </div>
-
-                <div class="rwd hide-on-med-and-down">
-                  <span onclick="setMobile()">
-                    <i class="fas fa-mobile-alt"></i>
-                  </span>
-                  <span onclick="setTablet()">
-                    <i class="fas fa-tablet-alt"></i>
-                  </span>
-                  <span onclick="setDesktop()">
-                    <i class="fas fa-desktop"></i>
-                  </span>
-                </div>
-          </div>
+          <h1>Paweł Wrzosek</h1>
+          <h2>
+            <span class="zielony">Front End Developer</span>
+          </h2>
         </div>
       </div>
-    </section>
-    <!-- <section id="three" class="section valign-wrapper"></section>
-    <section id="four" class="section valign-wrapper"></section> -->
-    <!-- SEKCJA -->
+    </div>
+  </section>
+  <section id="two" class="section">
+    <div class="info">
+      <h2>
+        <span>WHAT</span>
+        <span class="zielony">I</span>
+        <span>DO?</span>
+      </h2>
+    </div>
 
-    <!-- <div class="carousel carousel-slider center">
-      <div class="carousel-item red lighten-2 white-text" href="#one!">
-        <div class="row"></div>
-        <div class="row"></div>
-        <img src="img/js-logo.png" />
-        <div class="row">
-          <h1>JavaScript</h1>
-        </div>
-        <div class="row">
-          <div class="col s8 m4 offset-s2 offset-m4 center">
-            <a class="waves-effect blue waves-light btn modal-trigger" href="#modal-js">Szczegóły</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item red lighten-2 white-text" href="#two!">
-        <div class="row"></div>
-        <div class="row"></div>
-        <img src="img/html-logo.png" />
-        <div class="row">
-          <h1>Biblioteki</h1>
-        </div>
-        <div class="row">
-          <div class="col s8 m4 offset-s2 offset-m4 center">
-            <a class="waves-effect blue waves-light btn modal-trigger" href="#modal-html">Szczegóły</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item red lighten-2 white-text" href="#three!">
-        <div class="row"></div>
-        <div class="row"></div>
-        <img src="img/tools-logo.png" />
-        <div class="row">
-          <h1>Narzędzia i inne</h1>
-        </div>
-        <div class="row">
-          <div class="col s8 m4 offset-s2 offset-m4 center">
-            <a class="waves-effect blue waves-light btn modal-trigger" href="#modal-tools">Szczegóły</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- SEKCJA -->
-
-    <!-- <div class="row"></div>
-    <div class="row"></div>
     <div class="row">
-      <div class="col s12 m6 offset-m3">
-        <ul class="collapsible white">
-          <li>
-            <div class="collapsible-header"
-              >QuarticOn JavaScript Developer<span class="badge">05/2019 - obecnie</span>
+      <div class="col s12 center-align">
+        <div class="wrapper">
+          <div class="iphone">
+            <div class="polygon-shine"></div>
+            <div class="top">
+              <div class="camera"></div>
+              <div class="speaker"></div>
             </div>
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należy:</h5>
-                <ul>
-                  <li>Rozwój narzędzi i modułów dla działu wdrożeń.</li>
-                  <li>Programowanie, przygotowanie dedykowanych wdrożeń produktowych.</li>
-                  <li>Code review.</li>
-                  <li>Konfigurację nowych klientów i przygotowanie silnika rekomendacji do wdrożenia.</li>
-                  <li>Przygotowanie elementów strony z polecanymi produktami.</li>
-                  <li>Testowanie i sprawdzanie poprawności wdrożeń.</li>
-                </ul>
-              </span>
+            <div class="content"> </div>
+            <div class="main"> </div>
+            <div class="bottom">
+              <div class="circle"></div>
             </div>
-          </li>
-          <li>
-            <div class="collapsible-header"
-              >QuarticOn Junior JavaScript Developer<span class="badge">04/2018 - 05/2019</span></div
-            >
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należało:</h5>
-                <ul>
-                  <li>Programowanie, przygotowanie dedykowanych wdrożeń produktowych.</li>
-                  <li>Code review.</li>
-                  <li>Tworzenie autorskiej implementacji Google Analytics.</li>
-                  <li>Konfigurację nowych klientów i przygotowanie silnika rekomendacji do wdrożenia.</li>
-                  <li>Przygotowanie elementów strony z polecanymi produktami.</li>
-                  <li>Wsparcie działu sprzedaży w zakresie usług.</li>
-                  <li>Testowanie i sprawdzanie poprawności wdrożeń.</li>
-                </ul>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"
-              >Apex Andrzej Pełka Magazynier, kierowca<span class="badge">11/2015 - 01/2018</span></div
-            >
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należało:</h5>
-                <ul>
-                  <li>Remanent stanów magazynowych.</li>
-                  <li>Przygotowanie zamówień pod wysyłkę.</li>
-                  <li>Dostarczanie.</li>
-                  <li>Drobne prace biurowe.</li>
-                </ul>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"
-              >SOLID SECURITY SP. ZO.O Pracownik fizyczny<span class="badge">09/2014 - 09/2015</span></div
-            >
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należało:</h5>
-                <ul>
-                  <li>Obsługa biurowa mieszkańców osiedla.</li>
-                  <li>Ochrona fizyczna osób i mienia.</li>
-                </ul>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"
-              >AGROSKANER SP. ZO.O Specjalista SEO<span class="badge">04/2013 - 05/2014</span></div
-            >
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należało:</h5>
-                <ul>
-                  <li>Pozyskiwanie klientów hurtowych.</li>
-                  <li>Obsługa transakcji międzynarodowych. (Indie, Anglia, Rosja)</li>
-                  <li>Prowadzenie projektu budowy strony agroskaner.pl.</li>
-                  <li>Usprawnianie SEO.</li>
-                  <li>Analityka strony firmowej.</li>
-                </ul>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"
-              >MOTOCARS Biuro obsługi klienta<span class="badge">05/2012 - 02/2014</span>
-            </div>
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należało:</h5>
-                <ul>
-                  <li>Wystawianie FV.</li>
-                  <li>Obsługa szkodowości pojazdów flotowych</li>
-                  <li>Prowadzenie dokumentacji szkody komunikacyjnej</li>
-                  <li>Odbiór aut od klientów.</li>
-                  <li>Prace bieżące w biurze.</li>
-                </ul>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header"
-              >Maxi-Mobil Biuro obsługi klienta<span class="badge">11/2009 - 08/2011</span>
-            </div>
-            <div class="collapsible-body">
-              <span>
-                <h5>Do moich obowiązków należało:</h5>
-                <ul>
-                  <li>Wystawianie FV.</li>
-                  <li>Remanenty przedsezonowe 3 tys. kompletów opon.</li>
-                  <li>Obsługa klientów flotowych.</li>
-                  <li>Odbiór aut od klientów.</li>
-                  <li>Prace bieżące w biurze.</li>
-                </ul>
-              </span>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <div class="rwd hide-on-small-only">
+            <a onclick="setMobile()" class="btn-floating btn-large pulse">
+              <i class="fas fa-mobile-alt"></i>
+            </a>
+            <a onclick="setTablet()" class="btn-floating btn-large pulse">
+              <i class="fas fa-tablet-alt"></i>
+            </a>
+            <a onclick="setDesktop()" class="btn-floating btn-large pulse">
+              <i class="fas fa-desktop"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </div> -->
-
-    <!-- SEKCJA -->
-
-    <!-- <div class="row"></div>
-    <div class="row"></div>
+    </div>
+  </section>
+  <section id="three" class="section">
+    <div class="info">
+      <h2>
+        <span>MAIN</span>
+        <span class="zielony">SKILLS</span>
+      </h2>
+    </div>
     <div class="row">
-      <div class="col s10 offset-s1 m10 offset-m1 center">
-        <h2 class="white-text">Obiecana nagroda ;)</h2>
+      <div class="col s6 m3">
+        <h3 class="skill right-align">JavaScript</h3>
+      </div>
+      <div class="col s6 m3">
+        <div class="set-size charts-container left-align">
+          <div class="pie-wrapper progress-80">
+            <span class="label">80<span class="smaller">%</span></span>
+            <div class="pie">
+              <div class="left-side half-circle"></div>
+              <div class="right-side half-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m3">
+        <h3 class="skill right-align">HTML</h3>
+      </div>
+      <div class="col s6 m3">
+        <div class="set-size charts-container left-align">
+          <div class="pie-wrapper progress-95">
+            <span class="label">95<span class="smaller">%</span></span>
+            <div class="pie">
+              <div class="left-side half-circle"></div>
+              <div class="right-side half-circle"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col s4 offset-s4 center">
-        <a
-          class="center-align"
-          target="_blank"
-          onclick="sendDownloadPdfEvent()"
-          href="http://pawel-wrzosek.pl/cv_pawel_wrzosek.pdf"
-        >
-          <h3 class="white-text">Pobierz CV</h3>
-          <i class="fas fa-file-pdf"></i>
-        </a>
+      <div class="col s6 m3">
+        <h3 class="skill right-align">CSS</h3>
       </div>
-    </div> -->
+      <div class="col s6 m3">
+        <div class="set-size charts-container left-align">
+          <div class="pie-wrapper progress-90">
+            <span class="label">90<span class="smaller">%</span></span>
+            <div class="pie">
+              <div class="left-side half-circle"></div>
+              <div class="right-side half-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m3">
+        <h3 class="skill right-align">Python</h3>
+      </div>
+      <div class="col s6 m3">
+        <div class="set-size charts-container left-align">
+          <div class="pie-wrapper progress-50">
+            <span class="label">50<span class="smaller">%</span></span>
+            <div class="pie">
+              <div class="left-side half-circle"></div>
+              <div class="right-side half-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 m3">
+        <h3 class="skill right-align">Analytics</h3>
+      </div>
+      <div class="col s6 m3">
+        <div class="set-size charts-container left-align">
+          <div class="pie-wrapper progress-70">
+            <span class="label">70<span class="smaller">%</span></span>
+            <div class="pie">
+              <div class="left-side half-circle"></div>
+              <div class="right-side half-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 m3">
+        <h3 class="skill right-align">ADOBE PS</h3>
+      </div>
+      <div class="col s6 m3">
+        <div class="set-size charts-container left-align">
+          <div class="pie-wrapper progress-60">
+            <span class="label">60<span class="smaller">%</span></span>
+            <div class="pie">
+              <div class="left-side half-circle"></div>
+              <div class="right-side half-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-    ></script>
+  <section id="four" class="section">
+    <div class="info">
+      <h2>
+        <span>OTHER</span>
+        <span class="zielony">SKILLS</span>
+      </h2>
+    </div>
+    <div class="container center-align">
+      <div class="row">
+        <div class="col s12 m5 offset-m1">
+          <h5>Front End based</h5>
+          <div class="chip">ES5</div>
+          <div class="chip">ES6</div>
+          <div class="chip">jQuery</div>
+          <div class="chip">Next.js</div>
+          <div class="chip">ml5.js</div>
+          <div class="chip">p5.js</div>
+          <div class="chip">pug.js</div>
+          <div class="chip">Styled Components</div>
+          <div class="chip">Bootstrap</div>
+          <div class="chip">MaterializeCSS</div>
+          <div class="chip">MDL</div>
+          <div class="chip">Skeleton</div>
+          <div class="chip">Bulma</div>
+          <div class="chip">Animate.css</div>
+        </div>
+        <div class="col s12 m5 offset-m1">
+          <h5>Analytics / SEO</h5>
+          <div class="chip">GTag</div>
+          <div class="chip">GA</div>
+          <div class="chip">GTM</div>
+          <div class="chip"> Google Analytics</div>
+          <div class="chip">PageSpeed Insights</div>
+          <div class="chip">Google Search Console</div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col s12 m5 offset-m1">
+          <h5>Server side</h5>
+          <div class="chip">Basic PHP5</div>
+          <div class="chip">Flask (Python)</div>
+          <div class="chip"> Beautiful Soap</div>
+          <div class="chip">Bash</div>
+          <div class="chip">Terminal</div>
+        </div>
+        <div class="col s12 m5 offset-m1">
+          <h5>Tools & Other</h5>
+          <div class="chip">Git</div>
+          <div class="chip">Svn</div>
+          <div class="chip">GitHub</div>
+          <div class="chip">GitLab</div>
+          <div class="chip">Adobe Photoshop</div>
+          <div class="chip">Adobe Xd</div>
+          <div class="chip">Figma</div>
+          <div class="chip">Zabbix</div>
+          <div class="chip">Graylog</div>
+          <div class="chip">Elastic Searh</div>
+          <div class="chip">Prepros</div>
+          <div class="chip">FileZilla</div>
+        </div>
+    </div>
+  </section>
+  <section id="five" class="section">
+      <div class="info">
+          <h2>
+            <span>CONTACT</span>
+            <span class="zielony">INFO</span>
+          </h2>
+        </div>
+        <div class="container contact" style="min-height: 40vh;">
+          <div class="row">
+            <div class="col s12 center-align">
+                <a href="https://www.linkedin.com/in/paweł-wrzosek/" class="lnkd waves-effect waves-light btn btn-large">
+                  <i class="fab fa-linkedin left"></i>/in/paweł-wrzosek
+                </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 center-align">
+                <a href="mailto:pawel@pawel-wrzosek.pl" class="mail waves-effect waves-light btn btn-large">
+                  <i class="fas fa-envelope left"></i>pawel@pawel-wrzosek.pl</a>
+            </div>
+          </div>
+        </div>
+  </section>
 
-    <!-- Modal Structure -->
-    <!-- <div id="modal-js" class="modal modal-fixed-footer bottom-sheet">
-      <div class="modal-content">
-        <h4>JavaScript</h4>
-        <div class="row">
-          <div class="col s10 offset-s1 m6 offset-m3">
-            <ul class="collection center">
-              <li class="collection-item">
-                EcmaScript 5
-                <div class="progress">
-                  <div class="determinate" style="width: 90%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                EcmaScript 6
-                <div class="progress">
-                  <div class="determinate" style="width: 70%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                jQuery
-                <div class="progress">
-                  <div class="determinate" style="width: 70%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Next.js
-                <div class="progress">
-                  <div class="determinate" style="width: 50%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                ml5.js
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                p5.js
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                pug.js
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                chart.js
-                <div class="progress">
-                  <div class="determinate" style="width: 60%"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Schowaj</a>
-      </div>
-    </div> -->
-    <!-- Modal Structure -->
-    <!-- <div id="modal-html" class="modal modal-fixed-footer bottom-sheet">
-      <div class="modal-content">
-        <h4>Struktura i Biblioteki</h4>
-        <div class="row">
-          <div class="col s10 offset-s1 m6 offset-m3">
-            <ul class="collection center">
-              <li class="collection-item">
-                HTML5
-                <div class="progress">
-                  <div class="determinate" style="width: 95%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                CSS3
-                <div class="progress">
-                  <div class="determinate" style="width: 95%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Sass
-                <div class="progress">
-                  <div class="determinate" style="width: 90%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Styled Components
-                <div class="progress">
-                  <div class="determinate" style="width: 70%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Bootstrap
-                <div class="progress">
-                  <div class="determinate" style="width: 80%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                MaterializeCSS
-                <div class="progress">
-                  <div class="determinate" style="width: 100%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                MDL
-                <div class="progress">
-                  <div class="determinate" style="width: 70%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Skeleton
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Bulma
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Animate.css
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Schowaj</a>
-      </div>
-    </div> -->
-    <!-- Modal Structure -->
-    <!-- <div id="modal-tools" class="modal modal-fixed-footer bottom-sheet">
-      <div class="modal-content">
-        <h4>Struktura i Biblioteki</h4>
-        <div class="row">
-          <div class="col s10 offset-s1 m6 offset-m3">
-            <ul class="collection center">
-              <li class="collection-item">
-                Beautiful Soap
-                <div class="progress">
-                  <div class="determinate" style="width: 60%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Google Analytics
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Git, Svn, GitHub, GitLab
-                <div class="progress">
-                  <div class="determinate" style="width: 85%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Adobe Photoshop
-                <div class="progress">
-                  <div class="determinate" style="width: 80%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Prototyping Figma
-                <div class="progress">
-                  <div class="determinate" style="width: 60%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Linux / Bash
-                <div class="progress">
-                  <div class="determinate" style="width: 50%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                PHP 5
-                <div class="progress">
-                  <div class="determinate" style="width: 50%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Flask (Python)
-                <div class="progress">
-                  <div class="determinate" style="width: 50%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Zabbix, Graylog, Elastic Search
-                <div class="progress">
-                  <div class="determinate" style="width: 50%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                Prepros
-                <div class="progress">
-                  <div class="determinate" style="width: 95%"></div>
-                </div>
-              </li>
-              <li class="collection-item">
-                FileZilla
-                <div class="progress">
-                  <div class="determinate" style="width: 95%"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Schowaj</a>
-      </div>
-    </div> -->
-    <script src="/js/main.js"></script>
-  </body>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+
+  <script src="/js/main.js"></script>
+</body>
+
 </html>
